@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        img {
+            width: 100%;
+        }
+        p {
+            font-size: 15px;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <%= JSON.stringify(artical_data)%>
+        <li><%=artical_data.content%></li>
+        <li><%-artical_data.content%></li>
+        <a href="/artical?id=<%=artical_data.id%>&act=like">
+            <%=artical_data.n_like%>
+        </a>
+    </ul>
+</body>
+</html>

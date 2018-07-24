@@ -1,0 +1,17 @@
+GROUP BY
+
+//统计一下班级平均分
+
+SELECT class,AVG(score) FROM student_table GROUP BY class ORDER BY AVG(score) ASC;
+
+LIMIT 限制输出
+
+分页
+1.所有数据给前端
+2.所有数据由后台来控制
+
+LIMIT 10 只要10条数据
+LIMIT 5,8  从第5条开始要 8条数据
+
+有明确的顺序
+先SELECT查询 然后 WHERE 然后 GROUP BY 然后 ORDER BY 然后 LIMIT

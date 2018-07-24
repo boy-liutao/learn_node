@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        img {
+            width: 100%;
+        }
+        p {
+            font-size: 15px;
+            color: #000;
+        }
+    </style>
+</head>  
+<body>
+    <ul>
+        <% for(var i=0;i<banners.length;i++){ %>
+        <li>
+            <img src="<%= banners[i].src %>" alt="">
+            <p><%= banners[i].title %></p>
+            <p><%= banners[i].sub_title %></p>
+        </li>
+        <% } %>
+        <% for(var i=0;i<news.length;i++){ %>
+        <a href="/artical?id=<%=news[i].id %>">
+            <li>
+                <p><%= news[i].title %></p>
+                <p><%= news[i].fu_title %></p>
+            </li>
+        </a>
+        <% } %>
+    </ul>
+</body>
+</html>

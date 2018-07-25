@@ -103,7 +103,7 @@ server.get('/artical', (req, res) =>{
                             res.status(404).send("您请求的文章找不到").end();
                         }else{
                             // artical_data: data[0]
-                            var articalData = data[0];
+                            var articalData = data[0];    
                             articalData.content = articalData.content.replace(/^/gm,'<p>').replace(/$/gm,'</p>');
                             res.render("content.ejs",{artical_data:articalData})
                         }
